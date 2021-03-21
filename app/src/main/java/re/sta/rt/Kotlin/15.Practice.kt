@@ -62,6 +62,30 @@ class Calculator2() {
     }
 }
 
+class Calculator3(val initialValue : Int) {
+
+    fun plus (number : Int) : Calculator3 {
+        val result = this.initialValue + number
+        return Calculator3(result)
+    }
+
+    fun minus(number: Int) :Calculator3 {
+        val result = this.initialValue - number
+        return Calculator3(result)
+    }
+
+    fun multiply(number: Int) :Calculator3 {
+        val result = this.initialValue * number
+        return Calculator3(result)
+    }
+
+    fun divide(number: Int) :Calculator3 {
+        val result = this.initialValue / number
+        return Calculator3(result)
+    }
+}
+
+
 
 fun main(array: Array<String>) {
 
@@ -71,5 +95,12 @@ fun main(array: Array<String>) {
     println(calculator2.multiply(1, 2, 3))
     println(calculator2.divide(3, 4, 5))
 
+    println()
 
+    val calculator3 = Calculator3(3)
+    println(calculator3.plus(5).minus(3).plus(1).initialValue)
 }
+
+
+
+
