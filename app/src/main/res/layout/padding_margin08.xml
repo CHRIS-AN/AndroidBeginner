@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<!--
+    margin 이란?
+    부모로부터 margin 을 준 만큼 떨어지게 된다.
+-->
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="안녕하세요??"
+        android:background="#3F51B5"/>
+
+<!--
+    padding 이란?
+    자식 뷰 기준으로 자식 뷰가 가지고있는 컨텐츠를 어떻게 떨어트릴 지?
+-->
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="40dp"
+        android:text="안녕하세요??"
+        android:background="#CDDC39"/>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="200dp"
+        android:layout_marginLeft="100dp"
+        android:background="@color/black"/>
+
+
+</LinearLayout>

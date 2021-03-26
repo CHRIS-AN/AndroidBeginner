@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+<!--    경로를 적을 땐,  @를 적고 시작한다.    -->
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/ic_launcher_foreground"/>
+
+    <!--  centerCrop 이라는 걸 가장 많이 사용합니다.  -->
+    <ImageView
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:src="@drawable/water"
+        android:scaleType="centerCrop"
+        android:background="#03a9f4"/>
+
+</LinearLayout>
