@@ -8,9 +8,18 @@
     tools:context=".Listener">
 
     <TextView
-        android:text="hello"
+        android:text="please click !!"
+        android:textSize="20dp"
         android:id="@+id/helloEveryOne"
         android:layout_width="100dp"
         android:layout_height="100dp"/>
+
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/gradient"/>
 
 </LinearLayout>
