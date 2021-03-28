@@ -1,0 +1,22 @@
+
+
+
+
+01. Activity 란?
+앱의 한 화면입니다.
+Life Cycle(수명 주기)
+    1. onCreate
+        - Activity 가 만들어질 때, 단 한 번만 호출이 된다. ( process 가 kill 당하지 않는한. )
+        - Activity 를 만들 때, 단 한 번만 해주는 작업을 이 곳에서 처리하면 된다.
+    2. onStart
+    3. onResume
+        - 다시 앱으로 돌아올 때, 무조건 호출 된다.
+        - Activity 가 다시 호출될 때, 하면 되는 작업들을 여기서 처리하면 된다.
+    4. onPause
+        - 화면의 일부가 가려졌을 때
+    5. onStop
+        - 화면 전부가 보이지 않을 때
+    6. onDestroy
+
+
+https://developer.android.com/guide/components/activities/activity-lifecycle
