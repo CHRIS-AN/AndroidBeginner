@@ -1,0 +1,21 @@
+
+
+
+
+
+03. Intent
+
+    - 의도 ?, 또는 요구, 의사전달, 요청
+    - Intent 사용
+
+   요청 대상 :
+            - Activity 와 Activity
+            - Android System 과 내 App(보여진 화면)  ex) 전화 등등
+            - 다른 App 과 내 App ( 서로 규약 합의하에 사용 가능, 무작정 사용 불가능 )
+
+
+    요청의 종류 :
+            - 전달만 하는 요청 ( Activity -> Activity )
+            - 리턴을 받는 요청 ( 리턴 받은 결과값이 필요할 경우 )
+
+
