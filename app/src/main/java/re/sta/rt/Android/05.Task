@@ -11,7 +11,7 @@ Task ( = Activity)
 
    켜지는 방법을 자체 속성으로 가지고 있는 경우
    -> manifast 에서 launchMode
-
+q
    켜지는 방법을 지시하는 경우
    -> IntentFlag
 
