@@ -1,0 +1,34 @@
+
+
+
+
+Task ( = Activity)
+
+    - Stack :
+        - 햄버거 처럼 아래에서 위로 쌓이는 것
+        - Task 가 쌓인다.
+
+
+   켜지는 방법을 자체 속성으로 가지고 있는 경우
+   -> manifast 에서 launchMode
+
+   켜지는 방법을 지시하는 경우
+   -> IntentFlag
+
+
+   LaunchMode                   다중허용
+        - Standard                 O
+        - singleTop               조건부(열려고 하는 Activity 가 현재 Activity 라면, onNewIntent 를 호출한다.
+        =================
+        - singleTask               X
+        - singleInstance           X
+
+
+    IntentFlag
+        FLAG_ACTIVITY_NEW_TASK
+        FLAG_ACTIVITY_SINGLE_TOP
+        FLAG_ACTIVITY_CLEAR_TOP
+        등등(종류가 많다)
+
+
+
