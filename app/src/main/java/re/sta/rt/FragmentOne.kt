@@ -50,7 +50,7 @@ class FragmentOne : Fragment() {
 
         pass = view.findViewById(R.id.pass)
         pass.setOnClickListener {
-            
+
         }
 
 
