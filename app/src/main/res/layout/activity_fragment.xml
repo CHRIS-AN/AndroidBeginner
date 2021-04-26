@@ -14,11 +14,11 @@
         android:text="Fragment"
         android:textSize="50dp"/>
 
-    <fragment
-        android:id="@+id/fragment_one"
-        android:name="re.sta.rt.FragmentOne"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"/>
+<!--    <fragment-->
+<!--        android:id="@+id/fragment_one"-->
+<!--        android:name="re.sta.rt.FragmentOne"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="300dp"/>-->
 
 
     <Button

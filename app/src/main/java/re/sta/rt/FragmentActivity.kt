@@ -7,7 +7,12 @@ import android.util.Log
 import android.widget.Button
 import androidx.fragment.app.FragmentManager
 
-class FragmentActivity : AppCompatActivity() {
+class FragmentActivity : AppCompatActivity(), FragmentOne.OnDataPassListener {
+
+    override fun onDataPass(data: String?) {
+        Log.d("pass", "" + data)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fragment)

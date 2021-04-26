@@ -22,7 +22,8 @@ class FragmentOne : Fragment() {
     override fun onAttach(context: Context) {
         Log.d("life_cycle", "F onAttach")
         super.onAttach(context)
-        dataPassListener = context as OnDataPassListener
+        dataPassListener = context as OnDataPassListener // "adfdf".toInt() 이런느낌!!
+        // context를 OnDataPassListener 로 바꾸겠다라는 뜻.
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,9 +49,10 @@ class FragmentOne : Fragment() {
         Log.d("life_cycle", "F onViewCreated")
         super.onViewCreated(view, savedInstanceState)
 
+        // Activity의 Oncreate 에서 했던 작업을 여기에서 한다.
         pass = view.findViewById(R.id.pass)
         pass.setOnClickListener {
-
+                dataPassListener.onDataPass("Good Bye")
         }
 
 
