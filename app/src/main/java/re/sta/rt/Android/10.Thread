@@ -1,0 +1,26 @@
+
+
+
+
+Thread(쓰레드)
+- 작업 흐름.
+
+앱 실행 ------> Launcher Activity 가 켜짐 ------> ------->  작업흐름이라고 생각하면 됨.
+
+안드로이드의 쓰레드
+    ---> MainThread 가 1개 존재.
+    앱을 켜는 순간부터 앱을 종료할 때까지 존재합니다.
+
+MainThread 안에서, Launcher Activity 가 켜지고? 사용자에 의해서 Activity B가 실행될 수도 있고.. 기타 등등
+사용자의 input 에 따라서, 작업흐름이 달라질 수 있다.
+
+
+
+안드로이드 MainThread 의 특징
+- UI (User Interface) Thread 역할은 ??
+    - 사용자의 input 을 받는 쓰레드.
+
+ 특징은 절.대 정지시키면 안된다. !!
+    - 왜냐하면, 정지 시키거나 종료 시키면, 더 이상 사용자의 input 을 받을 수 없기 때문이다.
+
+    MainThread 를 종료 시키면 App 을 크래쉬, 즉 종료를 시키는 것이다.
