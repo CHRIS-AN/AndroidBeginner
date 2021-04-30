@@ -12,14 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/MyTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".PhoneBookDetailActivity"></activity>
-        <activity android:name=".PhoneBookActivity">
+        <activity android:name=".RecyclerViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ListViewActivity"></activity>
+        <activity android:name=".PhoneBookDetailActivity" />
+        <activity android:name=".PhoneBookActivity" />
         <activity android:name=".AddViewActivity" />
         <activity android:name=".Library" />
         <activity android:name=".Thread" />

@@ -1,8 +1,10 @@
 package re.sta.rt
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import org.w3c.dom.Text
@@ -37,8 +39,22 @@ class PhoneBookActivity : AppCompatActivity() {
             val view = layoutInflater.inflate(R.layout.phonebook_item, null)
             val personNameView = view.findViewById<TextView>(R.id.person_name)
             personNameView.setText(phoneBook.personList.get(i).name)
+            // 리스트 뷰 한 칸 한 칸 만들 때마다 리스너를 장착하게끔하는 것이다.   val person_detail_name : TextView = findViewById(R.id.person_detail_name)
+            //        val person_detail_number : TextView = findViewById(R.id.person_detail_number)
+            //
+            addSetOnClickListener(phoneBook.personList.get(i), view) // 여기의 view는 itemview한칸을 의미한다.
             container.addView(view)
 
+        }
+    }
+    fun addSetOnClickListener(person : Person, view: View) {
+        view.setOnClickListener{
+            val intent = Intent(this@PhoneBookActivity,
+                PhoneBookDetailActivity::class.java)
+
+            intent.putExtra("name", person.name)
+            intent.putExtra("number", person.number)
+            startActivity(intent)
         }
     }
 }
