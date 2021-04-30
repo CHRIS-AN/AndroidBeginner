@@ -2,11 +2,13 @@ package re.sta.rt
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -39,12 +41,23 @@ class RecyclerViewAdapter (
     val itemList : ArrayList<CarForList>,
     val inflater: LayoutInflater
 ): RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>(){
-    class ViewHolder(itemView : View):RecyclerView.ViewHolder(itemView) {
+
+    inner class ViewHolder(itemView : View):RecyclerView.ViewHolder(itemView) {
+
+
         val carName : TextView
         val carEngine : TextView
         init {
             carName = itemView.findViewById(R.id.car_name)
             carEngine = itemView.findViewById(R.id.car_engine)
+
+            itemView.setOnClickListener{
+                // 클릭을 했을 시, 그에 맞는 리스트 아이템의 토스트가 보여줘야하는데, position을 모른다.?
+                // 그럴 때, 이 변수를 쓰면 된다.
+                val position : Int = adapterPosition // 변수이다.
+                val engineName = itemList.get(position).engine
+                Log.d("engine","engine : " + engineName)
+            }
         }
     }
 
