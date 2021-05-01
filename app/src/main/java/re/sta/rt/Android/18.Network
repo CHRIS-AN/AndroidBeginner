@@ -1,0 +1,56 @@
+
+
+
+
+네트워크
+->
+
+인증 정보를 보낸다.
+- JSON 형식을 사용해서 data 를보낸다.
+- JavaScript Object Notation -> Javascript 에서 객체를 만들 때, 사용하는 표현식
+
+
+Json Response
+[
+    {
+        "id": 1,
+        "name" : "홍길동",
+        "age" : 25,
+        "intro" : "나는 홍길동이다."
+    }
+]
+
+
+Json Parsing
+-> Json 을 코틀린이나, 자바가 이해할 수 있게 변형하는 과정.
+
+Serializable (직렬화)
+-> 자바 시스템 내부에서 사용되는 object 를 외부에서 사용할 수 있도록
+    byte 형태로 바뀌는 것
+
+Request Type                (Status Code)
+-GET : 정보요청 ->              200 OK
+-POST : 정보 추가 요청           201 Created
+-DELETE : 정보 삭제 요청
+-PUT : 정보 수정 요청청
+
+Status Code
+200번대 : 처리가 잘 됐다.
+
+
+Library
+    - Volly
+    - Retrofit
+
+
+
+
+
+
+
+
+
+
+
+
+
