@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".TabPagerActivity"></activity>
-        <activity android:name=".PhoneBookWithRecyclerViewActivity" />
+        <activity android:name=".PhoneBookWithRecyclerViewActivity"/>
         <activity android:name=".RecyclerViewActivity" />
         <activity android:name=".ListViewActivity" />
         <activity android:name=".PhoneBookDetailActivity" />

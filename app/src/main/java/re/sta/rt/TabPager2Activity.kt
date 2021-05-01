@@ -12,7 +12,7 @@ import com.google.android.material.tabs.TabLayout
 class TabPager2Activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tab_pager2)
+        setContentView(R.layout.activity_tab_pager)
 
         val tab_layout : TabLayout = findViewById(R.id.tab_layout)
         val view_pager : ViewPager = findViewById(R.id.view_pager)
@@ -20,6 +20,21 @@ class TabPager2Activity : AppCompatActivity() {
         tab_layout.addTab(tab_layout.newTab().setText("ONE"))
         tab_layout.addTab(tab_layout.newTab().setText("TWO"))
         tab_layout.addTab(tab_layout.newTab().setText("THREE "))
+
+        val adapter = ThreePageAdapter(LayoutInflater.from(this@TabPager2Activity))
+        view_pager.adapter = adapter
+        view_pager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tab_layout))
+
+        tab_layout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                view_pager.currentItem = tab!!.position // 느낌표 두 개로 tab 이 무조건 있다고 해야한다.
+            }
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+            }
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+            }
+        })
+
     }
 }
 
@@ -30,19 +45,20 @@ class ThreePageAdapter (
     // 실질적으로 뷰를 그려준다.
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         when (position) {
-            1-> {
+            0-> {
                 val view = layoutInflater.inflate(R.layout.fragment_one, container, false)
                 container.addView(view)
                 return view
+
             }
 
-            2-> {
+            1-> {
                 val view = layoutInflater.inflate(R.layout.fragment_two, container, false)
                 container.addView(view)
                 return view
             }
 
-            3-> {
+            2-> {
                 val view = layoutInflater.inflate(R.layout.fragment_three, container, false)
                 container.addView(view)
                 return view
