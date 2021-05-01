@@ -12,14 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/MyTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".SharedPreferenceActivity">
+        <activity android:name=".RealmActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TabPager2Activity"></activity>
+        <activity android:name=".SharedPreferenceActivity"></activity>
+        <activity android:name=".TabPager2Activity" />
         <activity android:name=".TabPagerActivity" />
         <activity android:name=".PhoneBookWithRecyclerViewActivity" />
         <activity android:name=".RecyclerViewActivity" />
