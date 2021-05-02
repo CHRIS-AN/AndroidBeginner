@@ -3,6 +3,7 @@
     package="re.sta.rt">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -10,15 +11,18 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:name=".MasterApplication"
         android:theme="@style/MyTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".RetrofitActivity">
+        <activity android:name=".EmailSignupActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NetworkActivity"></activity>
+        <activity android:name=".PermisstionActivity"></activity>
+        <activity android:name=".RetrofitActivity" />
+        <activity android:name=".NetworkActivity" />
         <activity android:name=".AsyncActivity" />
         <activity android:name=".RealmActivity" />
         <activity android:name=".SharedPreferenceActivity" />
