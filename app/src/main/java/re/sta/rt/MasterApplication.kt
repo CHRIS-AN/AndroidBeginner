@@ -1,5 +1,5 @@
-package re.sta.rt
 
+package re.sta.rt
 import android.app.Application
 import android.content.Context
 import com.facebook.stetho.Stetho
@@ -9,33 +9,36 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+
 class MasterApplication : Application() {
 
-    lateinit var service : RetrofitService
+    lateinit var service: RetrofitService
 
     override fun onCreate() {
         super.onCreate()
+
         Stetho.initializeWithDefaults(this)
         createRetrofit()
+        //chrome://inspect/#devices
     }
 
+
     fun createRetrofit() {
-        // 헤더를 설정하는 부분
         val header = Interceptor {
             val original = it.request()
-
-            if(checkIsLogin()) { // 로그인이 되었다면?
-                getUserToken()?.let {token ->
+            if (checkIsLogin()) {
+                getUserToken()?.let { token ->
                     val request = original.newBuilder()
                         .header("Authorization", "token " + token)
                         .build()
-                    it.proceed(request) }
-            }else {
+                    it.proceed(request)
+                }
+            } else {
                 it.proceed(original)
             }
         }
 
-        val client  = OkHttpClient.Builder()
+        val client = OkHttpClient.Builder()
             .addInterceptor(header)
             .addNetworkInterceptor(StethoInterceptor())
             .build()
@@ -49,41 +52,21 @@ class MasterApplication : Application() {
         service = retrofit.create(RetrofitService::class.java)
     }
 
-    // 로그인을 체크하는 함수
-    fun checkIsLogin() : Boolean {
-        val sp = getSharedPreferences("login_sp", Context.MODE_PRIVATE)
-        val token = sp.getString("login_sp", "null") // 디폴트 벨류는 null
 
+    // 로그인을 했는지 확인을 합니다.
+    fun checkIsLogin(): Boolean {
+        val sp = getSharedPreferences("login_sp", Context.MODE_PRIVATE)
+        val token = sp.getString("login_sp", "null")
         if (token != "null") return true
-         else return false
-        }
+        else return false
+    }
 
-
-    fun  getUserToken() : String?  {
+    fun getUserToken(): String? {
         val sp = getSharedPreferences("login_sp", Context.MODE_PRIVATE)
-        val token = sp.getString("login_sp", "null") // 디폴트 벨류는 null
-
-        if(token == "null") return null
+        val token = sp.getString("login_sp", "null")
+        if (token == "null") return null
         else return token
     }
+
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
