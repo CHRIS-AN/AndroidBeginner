@@ -55,6 +55,13 @@ class OutStagramPostListActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.user_info).setOnClickListener {
             startActivity(Intent(this, OutstagramUserInfo::class.java)) }
 
+        findViewById<TextView>(R.id.my_list).setOnClickListener {
+            startActivity(Intent(this, OutStagramMyPostListActivity::class.java))
+        }
+
+        findViewById<TextView>(R.id.upload).setOnClickListener {
+            startActivity(Intent(this, OutStagramUploadActivity::class.java))
+        }
     }
 
 }

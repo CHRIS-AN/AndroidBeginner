@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/MyTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".OutStargramMyPostListActivity"></activity>
+        <activity android:name=".OutStagramMyPostListActivity"></activity>
+        <activity android:name=".OutStagramUploadActivity" />
+        <activity android:name=".OutStargramMyPostListActivity" />
         <activity android:name=".OutstagramUserInfo" />
         <activity android:name=".OutStagramPostListActivity" />
         <activity android:name=".LoginActivity" />
