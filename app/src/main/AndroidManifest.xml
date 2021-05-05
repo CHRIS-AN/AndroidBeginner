@@ -17,6 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/MyTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".MytubeDetailActivity"></activity>
         <activity android:name=".MyTubeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,7 +30,7 @@
         <activity android:name=".OutstagramUserInfo" />
         <activity android:name=".OutStagramPostListActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".EmailSignupActivity"></activity>
+        <activity android:name=".EmailSignupActivity" />
         <activity android:name=".PermisstionActivity" />
         <activity android:name=".RetrofitActivity" />
         <activity android:name=".NetworkActivity" />

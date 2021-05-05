@@ -3,7 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="32dp"
+    android:background="#353333">
 
     <ImageView
         android:id="@+id/youtube_Thumbnail"
@@ -19,7 +21,7 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:layout_marginBottom="8dp"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:textStyle="bold"
         android:gravity="center"/>
 
@@ -28,7 +30,7 @@
         android:id="@+id/youtube_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:textSize="16dp"
-        android:textColor="#000000"
-        android:gravity="center"/>
+        android:textColor="#ffffff"/>
 </LinearLayout>
