@@ -17,14 +17,15 @@
         android:supportsRtl="true"
         android:theme="@style/MyTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MytubeDetailActivity"></activity>
-        <activity android:name=".MyTubeActivity">
+        <activity android:name=".AppleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MytubeDetailActivity" />
+        <activity android:name=".MyTubeActivity"></activity>
         <activity android:name=".OutStagramMyPostListActivity" />
         <activity android:name=".OutStagramUploadActivity" />
         <activity android:name=".OutstagramUserInfo" />

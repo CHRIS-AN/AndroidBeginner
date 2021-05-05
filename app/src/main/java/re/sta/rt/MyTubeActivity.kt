@@ -25,8 +25,8 @@ class MyTubeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_tube)
 
-        (application as MasterApplication).service.getYoutubeList()
-            .enqueue(object: Callback<ArrayList<Youtube>>{
+        (application as MasterApplication).service.getYoutubeList().enqueue(
+            object: Callback<ArrayList<Youtube>>{
                 override fun onResponse(
                     call: Call<ArrayList<Youtube>>,
                     response: Response<ArrayList<Youtube>>
@@ -49,7 +49,8 @@ class MyTubeActivity : AppCompatActivity() {
 
                 }
 
-            })
+            }
+        )
     }
 }
 
