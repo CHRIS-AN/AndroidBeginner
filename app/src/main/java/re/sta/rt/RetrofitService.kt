@@ -49,4 +49,8 @@ interface RetrofitService {
     @GET("instagram/post/list/")
     fun getUserPostList():Call<ArrayList<Post>>
 
+
+    @GET("youtube/list/")
+    fun getYoutubeList():Call<ArrayList<Youtube>>
+
 }

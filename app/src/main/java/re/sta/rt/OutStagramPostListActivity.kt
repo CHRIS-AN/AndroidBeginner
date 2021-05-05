@@ -33,7 +33,7 @@ class OutStagramPostListActivity : AppCompatActivity() {
                     response: Response<ArrayList<Post>>
                 ) {
                     val postList = response.body()
-                    val adaper = MyPostAdapter(
+                    val adaper = PostAdapter(
                         postList!!,
                         LayoutInflater.from(this@OutStagramPostListActivity),
                         glide
