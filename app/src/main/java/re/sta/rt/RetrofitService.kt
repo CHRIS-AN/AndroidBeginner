@@ -36,6 +36,17 @@ interface RetrofitService {
         @Field("password") password : String
     ):Call<User>
 
-    @GET("/instagram/post/list/all/")
+    @GET("instagram/post/list/all/")
     fun getAllPosts():Call<ArrayList<Post>>
+
+    @Multipart
+    @POST("instagram/post/")
+    fun uploadPost(
+        @Part image : MultipartBody.Part,
+        @Part("content")requestBody: RequestBody
+    ):Call<Post>
+
+    @GET("instagram/post/list/")
+    fun getUserPostList():Call<ArrayList<Post>>
+
 }

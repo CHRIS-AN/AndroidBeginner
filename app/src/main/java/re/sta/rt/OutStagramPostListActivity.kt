@@ -15,7 +15,6 @@ import com.bumptech.glide.RequestManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.util.zip.Inflater
 
 class OutStagramPostListActivity : AppCompatActivity() {
 
@@ -34,7 +33,7 @@ class OutStagramPostListActivity : AppCompatActivity() {
                     response: Response<ArrayList<Post>>
                 ) {
                     val postList = response.body()
-                    val adaper = PostAdapter(
+                    val adaper = MyPostAdapter(
                         postList!!,
                         LayoutInflater.from(this@OutStagramPostListActivity),
                         glide
@@ -53,7 +52,8 @@ class OutStagramPostListActivity : AppCompatActivity() {
         )
 
         findViewById<TextView>(R.id.user_info).setOnClickListener {
-            startActivity(Intent(this, OutstagramUserInfo::class.java)) }
+            startActivity(Intent(this, OutstagramUserInfo::class.java))
+        }
 
         findViewById<TextView>(R.id.my_list).setOnClickListener {
             startActivity(Intent(this, OutStagramMyPostListActivity::class.java))

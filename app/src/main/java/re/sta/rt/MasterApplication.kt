@@ -56,7 +56,7 @@ class MasterApplication : Application() {
     // 로그인을 했는지 확인을 합니다.
     fun checkIsLogin(): Boolean {
         val sp = getSharedPreferences("login_sp", Context.MODE_PRIVATE)
-        val token = sp.getString("login_sp", "null")
+        val token = sp.getString("login_sp", "null") // 널을 집어 넣으면, 로그아웃 된다.
         if (token != "null") return true
         else return false
     }

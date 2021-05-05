@@ -1,5 +1,6 @@
 package re.sta.rt
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,5 +21,20 @@ class OutstagramUserInfo : AppCompatActivity() {
         findViewById<TextView>(R.id.upload).setOnClickListener {
             startActivity(Intent(this, OutStagramUploadActivity::class.java))
         }
+
+        findViewById<TextView>(R.id.logout).setOnClickListener {
+            val sp = getSharedPreferences("login_sp", Context.MODE_PRIVATE)
+            val editor = sp.edit()
+            editor.putString("login_sp", "null")
+            editor.commit()
+
+            // header 에 있는 인증 번호를 빼주어야한다.
+            (application as MasterApplication).createRetrofit()
+            finish()
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
+
+
+
     }
 }
