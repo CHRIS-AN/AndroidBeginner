@@ -25,31 +25,31 @@ class AppleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_apple)
 
-        (application as MasterApplication).service.getSongList().enqueue(
-            object : Callback<ArrayList<Song>> {
-                override fun onFailure(
-                    call: Call<ArrayList<Song>>, t:
-                    Throwable
-                ) {
-                }
-
-                override fun onResponse(
-                    call: Call<ArrayList<Song>>,
-                    response: Response<ArrayList<Song>>
-                ) {
-                    if (response.isSuccessful) {
-                        val songList = response.body()
-                        val adapter = MelonAdapter(
-                            songList!!,
-                            LayoutInflater.from(this@AppleActivity),
-                            Glide.with(this@AppleActivity),
-                            this@AppleActivity
-                        )
-                        findViewById<RecyclerView>(R.id.song_list).adapter = adapter
-                    }
-                }
-            }
-        )
+//        (application as MasterApplication).service.getSongList().enqueue(
+//            object : Callback<ArrayList<Song>> {
+//                override fun onFailure(
+//                    call: Call<ArrayList<Song>>, t:
+//                    Throwable
+//                ) {
+//                }
+//
+//                override fun onResponse(
+//                    call: Call<ArrayList<Song>>,
+//                    response: Response<ArrayList<Song>>
+//                ) {
+//                    if (response.isSuccessful) {
+//                        val songList = response.body()
+//                        val adapter = MelonAdapter(
+//                            songList!!,
+//                            LayoutInflater.from(this@AppleActivity),
+//                            Glide.with(this@AppleActivity),
+//                            this@AppleActivity
+//                        )
+//                        findViewById<RecyclerView>(R.id.song_list).adapter = adapter
+//                    }
+//                }
+//            }
+//        )
     }
 
 
